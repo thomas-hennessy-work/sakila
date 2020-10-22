@@ -36,3 +36,13 @@ WHERE length = (SELECT MAX(length) FROM film);
 10)
 SELECT title, special_features FROM film
 WHERE special_features = 'Deleted Scenes';
+
+11)
+
+12)
+
+13)
+SELECT ac.first_name, ac.last_name 
+FROM actor ac JOIN film_actor fa ON ac.actor_id = fa.actor_id
+WHERE ac.actor_id = (SELECT actor_id FROM film_actor
+GROUP BY actor_id ORDER BY COUNT(actor_id) DESC LIMIT 1) LIMIT 1;
