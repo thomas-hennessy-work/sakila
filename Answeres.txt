@@ -28,3 +28,7 @@ WHERE rating != 'R';
 8)
 SELECT title, length FROM film
 ORDER BY length ASC LIMIT 10;
+
+9)
+SELECT title, length FROM film
+WHERE length = (SELECT MAX(length) FROM film);
