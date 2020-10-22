@@ -16,3 +16,7 @@ WHERE actor_id%10 = 0;
 5)
 SELECT film_id, description FROM film
 WHERE film_id = 100;
+
+6)
+SELECT title, rating FROM film
+WHERE rating = 'R';
