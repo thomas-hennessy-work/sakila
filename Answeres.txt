@@ -58,3 +58,7 @@ SELECT AVG(length) FROM film;
 SELECT fl.category, AVG(fi.length) AS 'average film length'
 FROM film fi JOIN film_list fl ON fi.film_id = fl.FID
 GROUP BY fl.category;
+
+17)
+SELECT title, description FROM film
+WHERE description LIKE '%Robot%';
