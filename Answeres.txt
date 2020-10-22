@@ -62,3 +62,7 @@ GROUP BY fl.category;
 17)
 SELECT title, description FROM film
 WHERE description LIKE '%Robot%';
+
+18)
+SELECT COUNT(release_year) AS 'films released in 2010' FROM film
+WHERE release_year = 2010;
